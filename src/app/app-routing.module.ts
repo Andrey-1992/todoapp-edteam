@@ -4,8 +4,12 @@ import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
   {
-    path: '**',
-    component: Page404Component
+    path: 'auth',
+    loadChildren: () => import('@modules/auth/auth.module').then((m) => m.AuthModule)
+  },
+  {
+    path: 'task',
+    loadChildren: () => import('@modules/task/task.module').then((m) => m.TaskModule)
   }
 ];
 
