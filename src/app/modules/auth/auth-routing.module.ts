@@ -5,7 +5,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 //http:localhost:4200/auth
 const routes: Routes = [ 
   {
-    path: '',
+    path:'login',
     component: LoginPageComponent
   }
 ];
