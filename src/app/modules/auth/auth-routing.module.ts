@@ -2,10 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 
-//http:localhost:4200/auth
+//http:localhost:4200/auth/
 const routes: Routes = [ 
   {
     path:'login',
+    component: LoginPageComponent
+  },
+  {
+    path:'register',
     component: LoginPageComponent
   }
 ];
