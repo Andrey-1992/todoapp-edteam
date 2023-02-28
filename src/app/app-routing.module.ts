@@ -9,11 +9,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'auth',
+    path: 'auth', // Public
     loadChildren: () => import('@modules/auth/auth.module').then((m) => m.AuthModule)
   },
   {
-    path: 'task',
+    path: 'task', // Private 
     loadChildren: () => import('@modules/task/task.module').then((m) => m.TaskModule)
   }
 ];
