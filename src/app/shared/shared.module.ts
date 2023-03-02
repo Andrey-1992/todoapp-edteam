@@ -10,6 +10,9 @@ import { ReplaceSpacesPipe } from './pipes/replace-spaces.pipe';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ReplaceSpacesPipe
   ]
 })
 export class SharedModule { }
