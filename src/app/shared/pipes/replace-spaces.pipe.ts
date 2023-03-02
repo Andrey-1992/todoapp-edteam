@@ -5,8 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ReplaceSpacesPipe implements PipeTransform {
 
-  transform(value: string, args: string): string{
-    return 'hjola';
+  transform(value: string, args?: string): string{
+    value  = value.split(' ').join('-').toLocaleLowerCase();
+
+    return value;
   }
 
 }
