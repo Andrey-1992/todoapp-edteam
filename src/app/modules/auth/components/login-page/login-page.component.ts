@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ReplaceSpacePipe } from 'src/app/module/pipes/replace-space.pipe';
 
 @Component({
   selector: 'app-login-page',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
 export class LoginPageComponent {
 
   value = "Hola Andrey"
+
+  constructor(private replaceSpaces: ReplaceSpacePipe) {
+
+  }
+
+  ngOnInit(): void {
+    
+  }
 
 }
