@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Page404Component } from './page404/page404.component';
 import { HomeComponent } from './home/home.component';
+import { ReplaceSpacePipe } from './module/pipes/replace-space.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     Page404Component,
-    HomeComponent
+    HomeComponent,
+    ReplaceSpacePipe
   ],
   imports: [
     BrowserModule,
