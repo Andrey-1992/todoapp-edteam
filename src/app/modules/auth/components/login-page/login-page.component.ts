@@ -6,16 +6,14 @@ import { ReplaceSpacePipe } from 'src/app/module/pipes/replace-space.pipe';
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.css']
 })
-export class LoginPageComponent {
+export class LoginPageComponent implements OnInit{
 
   value = "Hola Andrey"
 
-  constructor(private replaceSpaces: ReplaceSpacePipe) {
-
-  }
+  constructor(private replaceSpaces: ReplaceSpacePipe) {}
 
   ngOnInit(): void {
-    
+    // this.value = this.replaceSpaces.transform(this.value)
   }
 
 }
