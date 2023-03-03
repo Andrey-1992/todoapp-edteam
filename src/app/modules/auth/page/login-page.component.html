@@ -9,8 +9,13 @@
       <div class="text-label d-flex d-all-center">
           Iniciar sesión
       </div>
+
+      <pre>
+        {{loginForm.value | json}}
+      </pre>
+
       <form [formGroup]="loginForm" (submit)="sendCredentials()" class="form d-flex">
-          <!-- <div class="form-input">
+          <div class="form-input">
               <input formControlName="email" 
               type="text" placeholder="Introduzca el correo electrónico">
           </div>
@@ -18,7 +23,7 @@
               <input formControlName="password" 
               type="password" placeholder="Introduzca la contraseña">
           </div>
-          <div class="form-input">
+          <!-- <div class="form-input">
               <button [disabled]="loginForm.invalid" class="btn-primary">Iniciar sesión</button>
           </div> -->
           <div>o</div>
