@@ -26,7 +26,8 @@ export class LoginPageComponent {
   }
 
   sendCredentials():void {
-
+    const body = this.loginForm.value;
+    console.log(body)
   }
 
 }
