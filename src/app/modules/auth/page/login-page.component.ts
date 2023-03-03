@@ -16,6 +16,13 @@ export class LoginPageComponent {
 
   ngOnInit(): void {
 
+    this.loginForm = new FormGroup(
+      {
+        email: new FormControl(),
+        password: new FormControl()
+      }
+    )
+
   }
 
   sendCredentials():void {
