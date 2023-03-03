@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login-page',
@@ -8,5 +9,7 @@ import { Router } from '@angular/router';
 })
 
 export class LoginPageComponent {
+
+  loginForm:FormGroup = new FormGroup({});
 
 }
