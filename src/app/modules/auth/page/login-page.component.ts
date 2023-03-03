@@ -12,4 +12,14 @@ export class LoginPageComponent {
 
   loginForm:FormGroup = new FormGroup({});
 
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+
+  sendCredentials():void {
+
+  }
+
 }
