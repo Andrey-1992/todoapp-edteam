@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+// import { AuthTestService } from '@modules/auth/services/auth-test.service';
 
 @Component({
   selector: 'app-register-form',
