@@ -18,8 +18,8 @@ export class LoginPageComponent {
 
     this.loginForm = new FormGroup(
       {
-        email: new FormControl('', [Validators.email]),
-        password: new FormControl('', [Validators.email])
+        email: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', [Validators.required])
       }
     )
 
