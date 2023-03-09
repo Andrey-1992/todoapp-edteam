@@ -24,10 +24,10 @@ export class RegisterFormComponent implements OnInit {
         }),
         // name: new FormControl('',[Validators.required, Validators.minLength(3)]),
         // lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        name: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
         phone: new FormControl('',[Validators.required, Validators.minLength(3)]),
         aboutMe: new FormControl('',[Validators.required, Validators.minLength(3)]),
-        password: new FormControl('',[Validators.required, Validators.minLength(3)]),
-        passwordConfirm: new FormControl('',[Validators.required, Validators.minLength(3)]),
       },
       {
         validators:passwordMatchValidator
