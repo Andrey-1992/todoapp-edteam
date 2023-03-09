@@ -1,6 +1,6 @@
 import { FormGroup, FormControl, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { AuthTestService } from '@modules/auth/services/auth-test.service';
+import { AuthService } from '@modules/auth/services/auth-test.service';
 
 @Component({
   selector: 'app-register-form',
@@ -11,7 +11,7 @@ export class RegisterFormComponent implements OnInit {
 
   registerForm:FormGroup = new FormGroup({});
 
-  constructor(private authService:AuthTestService) { }
+  constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
 
@@ -19,8 +19,8 @@ export class RegisterFormComponent implements OnInit {
       {
         email: new FormControl('',{
           validators:[Validators.required, Validators.email],
-          // asyncValidators:this.authService.uniqueEmailValidator(),
-          // updateOn:'blur'
+          asyncValidators:this.authService.uniqueEmailValidator(),
+          updateOn:'blur'
         }),
         name: new FormControl('',[Validators.required, Validators.minLength(3)]),
         lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),

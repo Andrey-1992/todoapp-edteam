@@ -8,23 +8,40 @@ import { catchError, delay, map, Observable, of, tap } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthTestService {
+export class AuthService {
+  // private URL = environment.api;
+  // constructor(private httpClient:HttpClient, private cookieService:CookieService) { }
 
-  constructor() { 
-    uniqueEmailValidator(): AsyncValidatorFn {
-      return (control: AbstractControl): Observable<ValidationErrors | null> => {
-      //   return of(control.value).pipe(
-      //     delay(500),
-      //     map((email) => {
-      //       const emails = ['test@test.com', 'hola@gmail.com'];
-      //       return emails.includes(email);
-      //     })
-      //   ).pipe(
-      //     map((exists) => (exists ? { emailExists: true } : null)),
-      //     catchError(async () => null)
-      //   );
-      };
-    }
+  // submitLogin(credentials:{email:string, password:string}):Observable<any> {
+  //  return this.httpClient.post(
+  //    `${this.URL}/auth/login`,
+  //    credentials)
+  //    .pipe(
+  //      tap((stream:any) => {
+  //       const {tokenSession} = stream;
+  //       this.cookieService.put('token_session',tokenSession,{
+  //         path:'/'
+  //       })
+  //      }),
+  //      catchError(() => {
+  //       console.log('Algo ocurrio?? fijate')
+  //       return of([])
+  //     })
+  //    )
+  // }
 
+  uniqueEmailValidator(): AsyncValidatorFn {
+    return (control: AbstractControl): Observable<ValidationErrors | null> => {
+      return of(control.value).pipe(
+        delay(500),
+        map((email) => {
+          const emails = ['test@test.com', 'hola@gmail.com'];
+          return emails.includes(email);
+        })
+      ).pipe(
+        map((exists) => (exists ? { emailExists: true } : null)),
+        catchError(async () => null)
+      );
+    };
   }
 }
