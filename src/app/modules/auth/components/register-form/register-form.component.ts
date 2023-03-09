@@ -1,6 +1,6 @@
 import { FormGroup, FormControl, Validators, ValidatorFn, AbstractControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-// import { AuthTestService } from '@modules/auth/services/auth-test.service';
+import { AuthTestService } from '@modules/auth/services/auth-test.service';
 
 @Component({
   selector: 'app-register-form',
@@ -11,7 +11,7 @@ export class RegisterFormComponent implements OnInit {
 
   registerForm:FormGroup = new FormGroup({});
 
-  // constructor(private authService:AuthTestService) { }
+  constructor(private authService:AuthTestService) { }
 
   ngOnInit(): void {
 
