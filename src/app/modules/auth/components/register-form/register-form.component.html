@@ -3,6 +3,8 @@
       <i class="logo-icon uil uil-apps"></i>
   </div>
 
+  <pre>{{registerForm.value | json}}</pre>
+
   <form [formGroup]="registerForm"  class="form d-flex">
       <div class="form-input">
           <input formControlName="email" 
