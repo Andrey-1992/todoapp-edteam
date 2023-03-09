@@ -52,7 +52,7 @@ export class RegisterFormComponent implements OnInit {
     }
 
     this.registerForm.setValue(mockData)
-
+    // setValue -> se tiene que mandar todo el objeto
   }
 
   testUploaded():void{
@@ -62,7 +62,7 @@ export class RegisterFormComponent implements OnInit {
     }
 
     this.registerForm.patchValue(mockData)
-
+    // patchValue -> se tiene que mandar  solo uno o varias propiedas y valores
   }
 }
 
