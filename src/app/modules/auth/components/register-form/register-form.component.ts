@@ -20,10 +20,10 @@ export class RegisterFormComponent implements OnInit {
         email: new FormControl('',{
           validators:[Validators.required, Validators.email],
           // asyncValidators:this.authService.uniqueEmailValidator(),
-          updateOn:'blur'
+          // updateOn:'blur'
         }),
-        name: new FormControl('',[Validators.required, Validators.minLength(3)]),
-        lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        // name: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        // lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
         phone: new FormControl('',[Validators.required, Validators.minLength(3)]),
         aboutMe: new FormControl('',[Validators.required, Validators.minLength(3)])
       },
