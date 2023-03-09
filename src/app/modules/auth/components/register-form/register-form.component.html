@@ -6,6 +6,9 @@
   <pre>{{registerForm.value | json}}</pre>
 
   <form [formGroup]="registerForm"  class="form d-flex">
+    <div>
+      <button class="btn-primary" (click)="testLoaded()">Load Data</button>
+    </div>
       <div class="form-input">
           <input formControlName="email" 
           type="text" placeholder="Introduzca el correo electrónico">
