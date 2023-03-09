@@ -28,6 +28,8 @@ export class RegisterFormComponent implements OnInit {
         lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
         phone: new FormControl('',[Validators.required, Validators.minLength(3)]),
         aboutMe: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        password: new FormControl('',[Validators.required, Validators.minLength(3)]),
+        passwordConfirm: new FormControl('',[Validators.required, Validators.minLength(3)]),
       },
       {
         validators:passwordMatchValidator
