@@ -53,6 +53,11 @@ export class RegisterFormComponent implements OnInit {
 
     this.registerForm.setValue(mockData)
     // setValue -> se tiene que mandar todo el objeto
+
+    console.log(this.registerForm.get('phone'))
+    this.registerForm.valueChanges.subscribe((res) => {
+      console.log(res)
+    })
   }
 
   testUploaded():void{
