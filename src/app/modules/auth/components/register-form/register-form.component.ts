@@ -22,8 +22,6 @@ export class RegisterFormComponent implements OnInit {
           // asyncValidators:this.authService.uniqueEmailValidator(),
           // updateOn:'blur'
         }),
-        // name: new FormControl('',[Validators.required, Validators.minLength(3)]),
-        // lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
         name: new FormControl('',[Validators.required, Validators.minLength(3)]),
         lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
         phone: new FormControl('',[Validators.required, Validators.minLength(3)]),
@@ -57,15 +55,15 @@ export class RegisterFormComponent implements OnInit {
 
   }
 
-  testUploaded():void{
+  // testUploaded():void{
 
-    const mockData = {
-      phone:'1-1111111'
-    }
+  //   const mockData = {
+  //     phone:'1-1111111'
+  //   }
 
-    this.registerForm.patchValue(mockData)
+  //   this.registerForm.patchValue(mockData)
 
-  }
+  // }
 }
 
 function passwordMatchValidator(formCurrent:AbstractControl | FormGroup):any {
