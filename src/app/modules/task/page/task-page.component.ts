@@ -12,8 +12,8 @@ export class TaskPageComponent {
 
   }
 
-  changeText():void {
-    this.showText = !this.showText;
-  }
+  // changeText():void {
+  //   this.showText = !this.showText;
+  // }
 
 }
