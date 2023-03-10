@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TaskPageComponent {
   showText = true;
+  case:number = 0;
 
   ngOnInti(): void {
 
