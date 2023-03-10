@@ -4,16 +4,18 @@ import { CommonModule } from '@angular/common';
 import { TaskRoutingModule } from './task-routing.module';
 import { TaskPageComponent } from './page/task-page.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ImgBrokenDirective } from '@shared/directives/img-broken.directive';
 
 
 @NgModule({
   declarations: [
     TaskPageComponent,
-    HeaderComponent
+    HeaderComponent,
+    ImgBrokenDirective
   ],
   imports: [
     CommonModule,
-    TaskRoutingModule
+    TaskRoutingModule,
   ]
 })
 export class TaskModule { }

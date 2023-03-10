@@ -14,7 +14,8 @@ import { ImgBrokenDirective } from './directives/img-broken.directive';
     CommonModule
   ],
   exports: [
-    ReplaceSpacesPipe
+    ReplaceSpacesPipe,
+    ImgBrokenDirective
   ]
 })
 export class SharedModule { }
