@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-task-page',
   templateUrl: './task-page.component.html',
   styleUrls: ['./task-page.component.css']
 })
-export class TaskPageComponent {
+export class TaskPageComponent implements OnInit {
+
   showText = true;
   case:number = 0;
 
-  ngOnInti(): void {
+  listUser:Array<{id:string, name:string}> = [
 
+  ];
+  
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   // changeText():void {
