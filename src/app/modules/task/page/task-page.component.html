@@ -3,7 +3,7 @@
 <app-header></app-header>
 <div class="task-columns">
 
-  <app-colum [data]="group.list"
+  <app-colum [name]="group.label" [data]="group.list"
   *ngFor="let group of groups">
   </app-colum>
     
@@ -23,7 +23,7 @@
 
 <!-- <button (click)="changeText()">Cambiar</button>
 <div *ngIf="showText">
-  Hola Mundo 👋 
+  Hola Mundo
 </div> -->
 <!-- 
 <div class="padre" [ngSwitch]="case">
