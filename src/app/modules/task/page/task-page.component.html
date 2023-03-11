@@ -1,9 +1,27 @@
 <app-header></app-header>
+
+<app-header></app-header>
+<div class="task-columns">
+    
+    <app-column
+    [name]="group.label" 
+    [data]="group.list" 
+    [id]="group._id" 
+    *ngFor="let group of (groups$ | async)?.data">
+    </app-column>
+    
+</div>
+
+
+
+
+
+
 <!-- <button (click)="changeText()">Cambiar</button>
 <div *ngIf="showText">
   Hola Mundo 👋 
 </div> -->
-
+<!-- 
 <div class="padre" [ngSwitch]="case">
 
   <div *ngSwitchCase="1">Hola soy Andrey</div>
@@ -16,4 +34,4 @@
 
 </div>
 
-<app-column [data]="listUser"></app-column>
+<app-column [data]="listUser"></app-column> -->
