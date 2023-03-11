@@ -1,11 +1,9 @@
 <app-header></app-header>
-
-<app-header></app-header>
 <div class="task-columns">
 
-  <app-colum [name]="group.label" [data]="group.list"
+  <app-column [name]="group.label" [data]="group.list"
   *ngFor="let group of groups">
-  </app-colum>
+  </app-column>
     
     <!-- <app-column
     [name]="group.label" 
