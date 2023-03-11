@@ -5,17 +5,18 @@ import { TaskRoutingModule } from './task-routing.module';
 import { TaskPageComponent } from './page/task-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ImgBrokenDirective } from '@shared/directives/img-broken.directive';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
   declarations: [
     TaskPageComponent,
     HeaderComponent,
-    ImgBrokenDirective
   ],
   imports: [
     CommonModule,
     TaskRoutingModule,
+    SharedModule,
   ]
 })
 export class TaskModule { }
