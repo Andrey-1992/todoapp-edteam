@@ -1,1 +1,17 @@
-<p>task-page works!</p>
+<app-header></app-header>
+<!-- <button (click)="changeText()">Cambiar</button>
+<div *ngIf="showText">
+  Hola Mundo 👋 
+</div> -->
+
+<div class="padre" [ngSwitch]="case">
+
+  <div *ngSwitchCase="1">Hola soy Andrey</div>
+
+  <div *ngSwitchCase="2">Hola soy Bridget</div>
+
+  <div *ngSwitchCase="3">Hola soy Andrey y Bridget</div>
+
+  <div *ngSwitchDefault="">Opcion por Defecto</div>
+
+</div>

@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./task-page.component.css']
 })
 export class TaskPageComponent {
+  showText = true;
+  case:number = 0;
+
+  ngOnInti(): void {
+
+  }
+
+  // changeText():void {
+  //   this.showText = !this.showText;
+  // }
 
 }
