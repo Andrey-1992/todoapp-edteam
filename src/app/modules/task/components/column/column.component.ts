@@ -5,14 +5,14 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
   templateUrl: './column.component.html',
   styleUrls: ['./column.component.css']
 })
-export class ColumnComponent implements OnInit, OnChanges{
+export class ColumnComponent implements OnInit{
   
   @Input() data:Array<any> = [];
   @Input() name:string = '';
   
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('---->', changes)
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   console.log('---->', changes)
+  // }
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
