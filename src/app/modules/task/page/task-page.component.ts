@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -96,6 +97,11 @@ export class TaskPageComponent implements OnInit {
         ]
       }
     ]
+
+    // ngOnDestroy(): void {
+    //   console.log('Me voy a destruir')
+    //     this.listObservables$.forEach((subscriptions)=> subscriptions.unsubscribe())
+    // }
 
     // this.taskService.getTask()
     // .subscribe((response) => {
