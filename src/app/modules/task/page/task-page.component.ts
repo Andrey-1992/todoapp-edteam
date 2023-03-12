@@ -28,6 +28,27 @@ export class TaskPageComponent implements OnInit {
               {
                 key: "time",
                 value: 152
+              },
+              {
+                key: "time",
+                value: 152
+              }
+            ]
+          },
+          {
+            order: "Test Angular",
+            items: [
+              {
+                key: "price",
+                value: 152
+              },
+              {
+                key: "time",
+                value: 152
+              },
+              {
+                key: "time",
+                value: 152
               }
             ]
           }
@@ -52,6 +73,25 @@ export class TaskPageComponent implements OnInit {
           }
         ]
       },
+      {
+        label: "Realizados",
+        color: "green",
+        list: [
+          {
+            order: "Como instalar Angular",
+            items: [
+              {
+                key: "price",
+                value: 152
+              },
+              {
+                key: "time",
+                value: 152
+              }
+            ]
+          }
+        ]
+      }
     ]
 
     // this.taskService.getTask()
