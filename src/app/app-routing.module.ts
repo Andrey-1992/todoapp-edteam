@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'task', // Private 
     loadChildren: () => import('@modules/task/task.module').then((m) => m.TaskModule)
     // ,canActivate: [ValidateSessionGuard]
+  },
+  {
+    path:'**',//TODO
+    redirectTo:'/task'
   }
 ];
 
