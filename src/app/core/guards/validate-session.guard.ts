@@ -8,11 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class ValidateSessionGuard implements CanActivate {
 
-  private cookie:string | null = null;; // We would consult to the browser
+  private cookie?:string | null = this.cookieService.get('token_session');// We would consult to the browser
 
   constructor(private router:Router, private cookieService:CookieService){
 
-  }
+  } 
 
   canActivate(
     route: ActivatedRouteSnapshot,
