@@ -21,13 +21,14 @@ export class ValidateSessionGuard implements CanActivate {
   }
 
   private checkCookie():boolean{
-    // return (this.cookie !== null). --> Fancier way to write it
+    console.log('👌👌', this.cookie)
 
-    if (this.cookie !== null) {
-      return true;
-    } else {
-      return true;
+    if(!this.cookie){
+      this.router.navigate(['/','auth','login'])
+      return false;
     }
+    
+    return true;
   }
   
 }
