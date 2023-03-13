@@ -19,7 +19,7 @@ export class CardComponent  {
 
 
   sendData():void{
-    // this.testCourseService.setData('Hola desde card 😉')
+    this.testCourseService.setData('Hola desde card 😉')
   }
   
 }

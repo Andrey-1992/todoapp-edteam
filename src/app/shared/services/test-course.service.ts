@@ -9,7 +9,7 @@ export class TestCourseService {
 
   constructor() { }
 
-  setDSata(msg:string):void {
+  setData(msg:string):void {
     this.datTest = msg;
   }
 }
