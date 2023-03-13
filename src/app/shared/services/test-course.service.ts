@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class TestCourseService {
 
-  public datTest:string = 'Hola mundo!'
+  public dataTest:string = 'Hola mundo!'
 
   constructor() { }
 
   setData(msg:string):void {
-    this.datTest = msg;
+    this.dataTest = msg;
   }
 }
