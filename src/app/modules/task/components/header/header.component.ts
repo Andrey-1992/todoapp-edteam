@@ -1,4 +1,4 @@
-// import { TestCourseService } from '@shared/services/test-course.service';
+import { TestCourseService } from '@shared/services/test-course.service';
 import { Component, OnInit } from '@angular/core';
 // import { NewTaskService } from '@modules/task/services/new-task.service';
 
@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  constructor(
+    public testCourseService:TestCourseService
+    ) { }
 
   menu: Array<{name:string, router:any}> = [
     {
