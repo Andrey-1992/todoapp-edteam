@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { Page404Component } from './page404/page404.component';
 import { HomeComponent } from './home/home.component';
 import { ReplaceSpacePipe } from './module/pipes/replace-space.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReplaceSpacePipe } from './module/pipes/replace-space.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CookieModule.forRoot()
   ],
   providers: [],
