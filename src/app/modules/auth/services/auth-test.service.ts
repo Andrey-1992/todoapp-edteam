@@ -10,7 +10,7 @@ import { CookieService } from 'ngx-cookie';
 })
 export class AuthService {
   // private URL = environment.api;
-  // constructor(private httpClient:HttpClient, private cookieService:CookieService) { }
+  constructor(private httpClient:HttpClient, private cookieService:CookieService) { }
 
   // submitLogin(credentials:{email:string, password:string}):Observable<any> {
   //  return this.httpClient.post(
