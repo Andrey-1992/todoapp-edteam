@@ -10,9 +10,10 @@ import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 
 export class LoginPageComponent {
 
+  constructor(private authService:AuthService, private router:Router) { }
+
   loginForm:FormGroup = new FormGroup({});
 
-  constructor() { }
 
   ngOnInit(): void {
 
