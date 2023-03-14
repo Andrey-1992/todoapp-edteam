@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth-test.service';
+import { CookieService } from 'ngx-cookie';
 
 @Component({
   selector: 'app-login-page',
@@ -11,7 +12,9 @@ import { AuthService } from '../services/auth-test.service';
 
 export class LoginPageComponent {
 
-  constructor(private authService:AuthService, private router:Router) { }
+  // constructor(private authService:AuthService, private router:Router) { }
+
+  constructor(private authService:AuthService, private cookieService:CookieService) { }
 
   loginForm:FormGroup = new FormGroup({});
 
