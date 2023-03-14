@@ -1,4 +1,4 @@
-// import { environment } from './../../../../environments/environment';
+import { environment } from './../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AbstractControl, AsyncValidatorFn, ValidationErrors } from '@angular/forms';
@@ -9,7 +9,7 @@ import { CookieService } from 'ngx-cookie';
   providedIn: 'root'
 })
 export class AuthService {
-  // private URL = environment.api;
+  private URL = environment.api;
   constructor(private httpClient:HttpClient, private cookieService:CookieService) { }
 
   // submitLogin(credentials:{email:string, password:string}):Observable<any> {
