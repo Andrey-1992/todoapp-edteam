@@ -1,5 +1,5 @@
 import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, DoCheck, ElementRef, Input, OnChanges, OnInit, Renderer2, SimpleChanges, ViewChild } from '@angular/core';
-// import { TestCourseService } from '@shared/services/test-course.service';
+import { TestCourseService } from '@shared/services/test-course.service';
 import { interval } from 'rxjs';
 
 @Component({
@@ -14,12 +14,12 @@ export class CardComponent  {
   @Input() items: Array<any> = []
 
   constructor(
-    // private testCourseService:TestCourseService
+    private testCourseService:TestCourseService
     ) { }
 
 
   sendData():void{
-    // this.testCourseService.setData('Hola desde card 😉')
+    this.testCourseService.setData('Hola desde card 😉')
   }
   
 }

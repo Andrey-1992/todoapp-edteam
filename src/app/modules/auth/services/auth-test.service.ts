@@ -1,18 +1,36 @@
-// import { environment } from './../../../../environments/environment';
+import { environment } from './../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AbstractControl, AsyncValidatorFn, ValidationErrors } from '@angular/forms';
 import { catchError, delay, map, Observable, of, tap } from 'rxjs';
-// import { CookieService } from 'ngx-cookie';
+import { CookieService } from 'ngx-cookie';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  // private URL = environment.api;
-  // constructor(private httpClient:HttpClient, private cookieService:CookieService) { }
+  private URL = environment.api;
+  constructor(private httpClient:HttpClient, private cookieService:CookieService) { }
 
-  // submitLogin(credentials:{email:string, password:string}):Observable<any> {
+  submitLogin(credentials:{email:string, password:string}):Observable<any> {
+   return this.httpClient.post(
+     `${this.URL}/auth/login`,
+     credentials)
+     .pipe(
+       tap((stream:any) => {
+        const {tokenSession} = stream;
+        this.cookieService.put('token_session',tokenSession,{
+          path:'/'
+        })
+       }),
+       catchError(() => {
+        console.log('Algo ocurrio?? fijate')
+        return of([])
+      })
+     )
+  }
+
+    // submitLogin(credentials:{email:string, password:string}):Observable<any> {
   //  return this.httpClient.post(
   //    `${this.URL}/auth/login`,
   //    credentials)
