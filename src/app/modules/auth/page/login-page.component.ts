@@ -33,6 +33,7 @@ export class LoginPageComponent {
 
   sendCredentials():void {
     const body = this.loginForm.value;
+    this.authService.submitLogin(body)
     console.log(body)
   }
 
