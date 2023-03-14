@@ -34,6 +34,9 @@ export class LoginPageComponent {
   sendCredentials():void {
     const body = this.loginForm.value;
     this.authService.submitLogin(body)
+    .subscribe((response) => {
+      this.router.navigate(['/','task'])
+    })
     console.log(body)
   }
 
