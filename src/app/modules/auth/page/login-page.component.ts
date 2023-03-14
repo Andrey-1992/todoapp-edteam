@@ -35,7 +35,9 @@ export class LoginPageComponent {
     const body = this.loginForm.value;
     this.authService.submitLogin(body)
     .subscribe((response) => {
-      this.router.navigate(['/','task'])
+      const {tokenSession} = response;
+      console.log(response)
+      // this.router.navigate(['/','task'])
     })
     console.log(body)
   }
