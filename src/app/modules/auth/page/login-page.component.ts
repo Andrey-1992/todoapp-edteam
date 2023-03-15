@@ -39,6 +39,9 @@ export class LoginPageComponent {
     this.authService.submitLogin(body)
     .subscribe((response) => {
       const {tokenSession} = response;
+      this.cookieService.put('token_session', tokenSession, {
+        path:'/'
+      } )
       console.log(response)
       // this.router.navigate(['/','task'])
     })
