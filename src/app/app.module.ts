@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { Page404Component } from './page404/page404.component';
 import { HomeComponent } from './home/home.component';
 import { ReplaceSpacePipe } from './module/pipes/replace-space.pipe';
-import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenSessionInterceptor } from './core/interceptors/token-session.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,13 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     CookieModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      useClass:TokenSessionInterceptor,
+      provide:HTTP_INTERCEPTORS,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

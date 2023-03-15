@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth-test.service';
+import { CookieService } from 'ngx-cookie';
 
 @Component({
   selector: 'app-login-page',
@@ -11,7 +12,9 @@ import { AuthService } from '../services/auth-test.service';
 
 export class LoginPageComponent {
 
-  constructor(private authService:AuthService, private router:Router) { }
+  // constructor(private authService:AuthService, private router:Router) { }
+
+  constructor(private authService:AuthService, private cookieService:CookieService) { }
 
   loginForm:FormGroup = new FormGroup({});
 
@@ -29,13 +32,27 @@ export class LoginPageComponent {
       }
     )
 
+    // this.taskService.getTask()
+    // .subscribe((response) => {
+
+    //   const {data} = response;
+    //   this.groups = data;
+    //   console.log('--->',response)
+
+    // })
+
   }
 
   sendCredentials():void {
     const body = this.loginForm.value;
     this.authService.submitLogin(body)
     .subscribe((response) => {
-      this.router.navigate(['/','task'])
+      const {tokenSession} = response;
+      this.cookieService.put('token_session', tokenSession, {
+        path:'/'
+      } )
+      console.log(response)
+      // this.router.navigate(['/','task'])
     })
     console.log(body)
   }
