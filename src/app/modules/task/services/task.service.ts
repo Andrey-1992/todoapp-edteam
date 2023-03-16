@@ -13,11 +13,12 @@ export class TaskService {
   getTask():Observable<any>{
     return this.httpClient.get(
       `${this.URL}/task`
-    // ).pipe(
-    //   catchError(() => {
-    //     console.log('Algo ocurrio?? fijate')
-    //     return of([])
-    //   })
+    ).pipe(
+      catchError(() => {
+        console.log('Algo ocurrio?? fijate')
+        return of([])
+      })
+      // .pipes() => allows you to filter data before coming sending to the subscriber ! Mostly common use the Error Handling
     )
   }
 }
