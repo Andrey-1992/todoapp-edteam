@@ -13,11 +13,11 @@ export class TaskService {
   getTask():Observable<any>{
     return this.httpClient.get(
       `${this.URL}/task`
-    ).pipe(
-      catchError(() => {
-        console.log('Algo ocurrio?? fijate')
-        return of([])
-      })
+    // ).pipe(
+    //   catchError(() => {
+    //     console.log('Algo ocurrio?? fijate')
+    //     return of([])
+    //   })
     )
   }
 }
