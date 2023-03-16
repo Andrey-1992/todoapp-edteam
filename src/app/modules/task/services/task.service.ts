@@ -19,6 +19,7 @@ export class TaskService {
         return of([])
       })
       // .pipes() => allows you to filter data before coming sending to the subscriber ! Mostly common use the Error Handling
+      // aqui es donde puedes interceptar todos los errores de fetch() y manejarlos.
     )
   }
 }
