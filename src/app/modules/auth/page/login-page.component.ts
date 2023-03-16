@@ -46,6 +46,7 @@ export class LoginPageComponent {
   sendCredentials():void {
     const body = this.loginForm.value;
     this.authService.submitLogin(body)
+    // subscribe => is subcribed to an observable in order to pass all the data from a service a component
     .subscribe((response) => {
       const {tokenSession} = response;
       this.cookieService.put('token_session', tokenSession, {
