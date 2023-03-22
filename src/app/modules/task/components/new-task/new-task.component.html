@@ -1,14 +1,14 @@
 <div class="wrapper" *ngIf="showModal$ | async">
   <div class="new-task">
       
-      <form [formGroup]="newTask" (ngSubmit)="saveTask()">
+      <!-- <form [formGroup]="newTask" (ngSubmit)="saveTask()">
 
           <div class="form-input">
               <label>Titulo</label>
               <input formControlName="order" type="text">
-          </div>
+          </div> -->
 
-          <ng-container formArrayName="item" 
+          <!-- <ng-container formArrayName="item" 
           *ngFor="let field of formItemsGroup$ | async;let i = index" >
           
               <div class="form-input" 
@@ -17,7 +17,7 @@
                   <input formControlName="value" type="text">
               </div>
       
-          </ng-container>
+          </ng-container> -->
         
           <div class="form-input">
               <button class="btn-primary">Guardar</button>
