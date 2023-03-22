@@ -8,6 +8,7 @@ import { ImgBrokenDirective } from '@shared/directives/img-broken.directive';
 import { SharedModule } from '@shared/shared.module';
 import { ColumnComponent } from './components/column/column.component';
 import { CardComponent } from './components/card/card.component';
+import { NewTaskComponent } from './components/new-task/new-task.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { CardComponent } from './components/card/card.component';
     HeaderComponent,
     ColumnComponent,
     CardComponent,
+    NewTaskComponent,
   ],
   imports: [
     CommonModule,
